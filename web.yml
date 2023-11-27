@@ -22,6 +22,10 @@
     when: condition_redhat 
     ignore_errors: True
     no_log: True
+    
+  - name: "Inside Redhat"
+    debug:
+      var: output
       
   - name: "Installing apache in Ubuntu"
     package:
@@ -32,9 +36,8 @@
     ignore_errors: True
     no_log: True
 
-  - debug:
-      var:  output
-  - debug:
+  - name: "Inside Ubuntu" 
+    debug:
       var: result
 
 
